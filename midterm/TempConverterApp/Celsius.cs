@@ -12,5 +12,9 @@ namespace TempConverterApp
             this.temperature = temperature;
         }
 
+        public override string GetUnit()
+        {
+            return "C";
+        }
     }
 }

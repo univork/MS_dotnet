@@ -11,5 +11,10 @@ namespace TempConverterApp
         public Fahrenheit(decimal temperature) {
             this.temperature = temperature;
         }
+
+        public override string GetUnit()
+        {
+            return "F";
+        }
     }
 }

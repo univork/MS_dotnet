@@ -14,5 +14,10 @@ namespace TempConverterApp
         {
             return temperature;
         }
+        
+        public virtual string GetUnit()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TempConverterApp
 {
-    public class TemperatureConverter
+    public class TemperatureConverter: IConvertTemperature
     {
         protected decimal CelsiusToFahrenheit(decimal temp_in_c)
         {
