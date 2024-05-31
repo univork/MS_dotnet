@@ -27,7 +27,7 @@ using (var conn = new SqlConnection(connectionString))
     }
 
     // delete
-    string deleteProduct = "DELETE FROM Product WHERE title = 'Hammer'";
+    string deleteProduct = "DELETE FROM Product WHERE title = 'GeForce RTX 4090 16GB'";
     using (SqlCommand deleteProductCommand = new(deleteProduct, conn))
     {
         conn.Open();
@@ -91,6 +91,7 @@ static void InsertProductWithCategory(Product product, string connection_string)
                 command.Parameters.AddWithValue("category_id", category_id);
                 command.ExecuteNonQuery();
             }
+            transaction.Commit();
             Console.WriteLine("Product added");
         } catch (Exception ex)
         {
